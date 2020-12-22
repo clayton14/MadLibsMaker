@@ -192,26 +192,4 @@ public class MadScraper {
        randRemove();
    }
 
-    public static void main(String[] args) throws ClassNotFoundException {
-
-//        Scanner s = new Scanner(System.in);
-//        MadScraper m = new MadScraper();
-//        System.out.println("Welcome to Mad Lib Maker \enenter a valid URL to start");
-//        String URL = s.nextLine();
-//        m.setURl(URL);
-//
-//        m.run();
-//
-//        System.out.println("The word count is: " + m.wordCount());
-//        System.out.print("IF the website contains a large amount of text you might want to increase the removal division rate\n\t --> enter rate");
-//        int rate = s.nextInt();
-//        m.userInterface(rate);
-
-        MadScraper mad = new MadScraper();
-        mad.setURl("https://en.wikipedia.org/wiki/Barack_Obama");
-        System.out.println("\nThe word count is: " + mad.wordCount()) ;
-        mad.run();
-        mad.userInterface(2000);
-
-    }
 }
