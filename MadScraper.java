@@ -3,8 +3,8 @@
  *
  * @author Clayton Easley
  *
- * This is the class responsable for scraping text from the webpage
- * Then randmoly removes words from the text and allowes new words to
+ * This is the class responsible for scraping text from the webpage
+ * Then randomly removes words from the text and allows new words to
  * fill in
  *
  *
@@ -49,9 +49,10 @@ public class MadScraper {
    
     //Methods
 
-    /**
-     * the  getWords() method has one purpose and it is to extract all the text from a
-     * website (all text in the <p> tags )
+    /**<p>
+     * @apiNote the getWords(), with no parameters,is a method that connects to a website and
+     * retrieves all the text within the "p" tags
+     * <p/>
      */
     public String getText() {
 
@@ -67,10 +68,19 @@ public class MadScraper {
         return pGraph.text();
     }
 
-    /**
-     * Based off of the tag properties entered as the parameter it will remover them from the list
-     * aka tries to filter out links
-     * */
+    /**<p>
+     * @apiNote the getWords(), with parameters, is a method that connects to a website and
+     *          retrieves all the text within the "p" tags
+     *          removes cssQuery
+     *
+     * @apiNote href > removes tags with href
+     *          src > removes tags with src
+     *          class > removes tags with class
+     *          all > removes all
+     *
+     *
+     * <p/>
+     */
     public String getText(String tagType) {
         Elements p = null;
         try {
@@ -100,9 +110,7 @@ public class MadScraper {
     return p.text();
     }
 
-    /**
-     * puts all the words into an array and gets the length
-     * */
+
 
 
     public void mySplit(String text) {
@@ -131,7 +139,9 @@ public class MadScraper {
         //return array; don't need to return
     }
 
-
+    /**
+     * @return puts all the words into an array and returns the length
+     * */
     public int wordCount(){
         // looks for whitespace and a lot simpler than a tokenizer
          mySplit(getText().trim());
